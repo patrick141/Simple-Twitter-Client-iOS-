@@ -51,9 +51,9 @@
         <!--Home-->
         <scene sceneID="TKV-8Y-BWQ">
             <objects>
-                <tableViewController id="VzJ-Wk-PDR" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="VzJ-Wk-PDR" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hZ0-n0-w9M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
@@ -64,7 +64,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1q2-U7-yIl">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1q2-U7-yIl">
                                             <rect key="frame" x="0.0" y="0.0" width="65" height="65"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="65" id="72F-xr-ViM"/>
@@ -83,15 +83,31 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7I-09-af9">
+                                            <rect key="frame" x="154" y="11" width="39.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFa-Vb-IJd">
+                                            <rect key="frame" x="354" y="11" width="39.5" height="19.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="N7I-09-af9" firstAttribute="top" secondItem="W2X-nM-PMx" secondAttribute="topMargin" id="10s-nU-GxQ"/>
                                         <constraint firstItem="rny-T2-gNU" firstAttribute="trailing" secondItem="W2X-nM-PMx" secondAttribute="trailingMargin" id="865-gD-EpA"/>
                                         <constraint firstItem="i3u-ik-H6R" firstAttribute="top" secondItem="W2X-nM-PMx" secondAttribute="topMargin" id="Ddh-eb-RVs"/>
                                         <constraint firstItem="i3u-ik-H6R" firstAttribute="top" secondItem="W2X-nM-PMx" secondAttribute="topMargin" id="RT1-rY-EjW"/>
                                         <constraint firstItem="1q2-U7-yIl" firstAttribute="leading" secondItem="W2X-nM-PMx" secondAttribute="leading" id="ZNY-SJ-cqW"/>
+                                        <constraint firstItem="N7I-09-af9" firstAttribute="leading" secondItem="i3u-ik-H6R" secondAttribute="trailing" constant="8" symbolic="YES" id="cV1-4h-M9h"/>
                                         <constraint firstItem="i3u-ik-H6R" firstAttribute="leading" secondItem="1q2-U7-yIl" secondAttribute="trailing" constant="8" symbolic="YES" id="frd-S3-qCM"/>
+                                        <constraint firstItem="JFa-Vb-IJd" firstAttribute="top" secondItem="W2X-nM-PMx" secondAttribute="topMargin" id="gx5-Gv-TlG"/>
                                         <constraint firstItem="rny-T2-gNU" firstAttribute="top" secondItem="i3u-ik-H6R" secondAttribute="bottom" constant="8" symbolic="YES" id="ifd-9J-iQN"/>
                                         <constraint firstItem="rny-T2-gNU" firstAttribute="bottom" secondItem="W2X-nM-PMx" secondAttribute="bottomMargin" id="mJ2-nv-Y1b"/>
+                                        <constraint firstItem="JFa-Vb-IJd" firstAttribute="trailing" secondItem="W2X-nM-PMx" secondAttribute="trailingMargin" id="mfX-Ph-zoh"/>
                                         <constraint firstItem="i3u-ik-H6R" firstAttribute="leading" secondItem="1q2-U7-yIl" secondAttribute="trailing" constant="8" symbolic="YES" id="nD2-Tr-43D"/>
                                         <constraint firstItem="rny-T2-gNU" firstAttribute="leading" secondItem="1q2-U7-yIl" secondAttribute="trailing" constant="8" symbolic="YES" id="xLl-Qq-SHV"/>
                                         <constraint firstItem="1q2-U7-yIl" firstAttribute="top" secondItem="W2X-nM-PMx" secondAttribute="top" id="zJy-NE-sol"/>
@@ -99,6 +115,8 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="profileImageView" destination="1q2-U7-yIl" id="qJa-tB-0qg"/>
+                                    <outlet property="realUNLabel" destination="N7I-09-af9" id="Msg-Es-gSm"/>
+                                    <outlet property="timeLabel" destination="JFa-Vb-IJd" id="2hl-gR-aOS"/>
                                     <outlet property="tweetContent" destination="rny-T2-gNU" id="XAk-7f-npv"/>
                                     <outlet property="userNameLabel" destination="i3u-ik-H6R" id="Osa-Xx-deI"/>
                                 </connections>
@@ -120,14 +138,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAT-oB-Chd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1488.8" y="-112.89355322338831"/>
+            <point key="canvasLocation" x="1488.4057971014495" y="-113.16964285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="unJ-FY-ekL">
             <objects>
-                <navigationController id="cOu-45-Ljk" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="cOu-45-Ljk" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zex-Rh-0Ve">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" systemColor="systemTealColor"/>
                         <textAttributes key="titleTextAttributes">
@@ -135,7 +153,6 @@
                         </textAttributes>
                     </navigationBar>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JZN-gY-hzf">
-                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
